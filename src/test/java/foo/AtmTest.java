@@ -15,7 +15,7 @@ public class AtmTest {
     }
     
     @Test    
-    public void testGetQuantity1(){    	
+    public void testGetQuantity(){    	
     	HashMap <Integer, Integer> expectedQuantities = new HashMap <Integer, Integer>();
     	expectedQuantities.put(500, 2);
     	expectedQuantities.put(200, 4);
