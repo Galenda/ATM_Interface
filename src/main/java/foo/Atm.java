@@ -44,7 +44,7 @@ public class Atm implements AtmInterface {
 	}
 
 	@Override
-	public int getCach(int value) {
+	public int getCash(int value) {
 		if ((value > getBalance()) || (value % 50 > 0) || (value < 0)) {
 			return -1;
 		} else {

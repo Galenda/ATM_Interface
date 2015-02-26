@@ -10,7 +10,7 @@ public class AtmTest {
 	@Test
     public void testGetBalance(){    	   	
     	assertEquals(3000, (int) testAtm.getBalance());
-    	testAtm.getCach(200);
+    	testAtm.getCash(200);
     	assertEquals(2800, (int) testAtm.getBalance());
     }
     
@@ -37,34 +37,34 @@ public class AtmTest {
     
     @Test (expected = UnsupportedOperationException.class)
     public void testDepositNotesOutOfRangeException(){    	
-    	testAtm.getCach(100);     	
+    	testAtm.getCash(100);     	
     	testAtm.depositNotes(100, -1);
     }
     
     @Test
     public void testDepositNotes(){
-    	testAtm.getCach(1000);
+    	testAtm.getCash(1000);
     	testAtm.depositNotes(500, 1);    	
     	assertEquals(1, (int) testAtm.getQuantity().get(500));    	
     }
         
     @Test
     public void testGetCaschFailure(){
-    	assertEquals(-1, (int) testAtm.getCach(3500));
-    	assertEquals(-1, (int) testAtm.getCach(320));
-    	testAtm.getCach(450);
-    	testAtm.getCach(450);
-    	testAtm.getCach(450);
-    	testAtm.getCach(450);
+    	assertEquals(-1, (int) testAtm.getCash(3500));
+    	assertEquals(-1, (int) testAtm.getCash(320));
+    	testAtm.getCash(450);
+    	testAtm.getCash(450);
+    	testAtm.getCash(450);
+    	testAtm.getCash(450);
     	
-    	assertEquals(-1, (int) testAtm.getCach(850));
-    	assertEquals(-1, (int) testAtm.getCach(-150));
+    	assertEquals(-1, (int) testAtm.getCash(850));
+    	assertEquals(-1, (int) testAtm.getCash(-150));
     }
     
     @Test
     public void testGetCachSuccess(){
-    	assertEquals(600, (int) testAtm.getCach(600));
-    	assertEquals(850, (int) testAtm.getCach(850));
+    	assertEquals(600, (int) testAtm.getCash(600));
+    	assertEquals(850, (int) testAtm.getCash(850));
     }
 
 }

@@ -22,7 +22,7 @@ public interface AtmInterface {
 	 *            is amount if cash you want to get
 	 * @return <b>value</b> - if successful or <b>-1</b> if not
 	 */
-	public int getCach(int value);
+	public int getCash(int value);
 
 	/**
 	 * 
